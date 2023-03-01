@@ -5,7 +5,11 @@ module.exports = {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        page1: "url('../assets/mountain-fuji-1.jpg')",
+      },
+    },
   },
   plugins: [],
 }
