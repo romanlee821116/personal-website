@@ -1,6 +1,7 @@
 <template>
 	<div
-		class="first-page-wrap flex flex-col justify-center bg-page1"
+		id="first-page"
+		class="flex flex-col justify-center bg-page1 section h-screen"
 	>
 		<b>Hi! I'm</b>
 		<div class="text-4xl mt-4 mb-6">An Yi</div>
@@ -10,11 +11,10 @@
 		>
 			VIEW MY WORKS
 		</button>
-		<img src="../assets/vue.svg" class="logo vue" alt="Vue logo" />
 	</div>
 </template>
-<script setup>
 
+<script setup>
 import {defineProps} from 'vue';
 const props = defineProps({
 	pageNumber: {
