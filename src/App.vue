@@ -5,34 +5,50 @@
 		:options="options"
 		id="full-page"
 	>
-		<FirstPage
-			:class="sectionClass"
-			:bg-image="bgImageMap.first"
-			@goToProject="goToProject"
-		/>
-		<div class="section h-screen">
-			Second section ...
-		</div>
+		<template
+			v-for="(item, index) in pageComponentMap"
+			:key="`page-${index}`"
+		>
+			<component
+				:is="item.component"
+				v-bind="{...item.props}"
+			/>
+		</template>
 	</FullPage>
 </template>
 
 <script setup>
 	import FirstPage from './components/FirstPage.vue';
+	import SecondPage from './components/SecondPage.vue';
 	import { reactive } from 'vue';
 
 	const options = reactive({
 		menu: '#menu',
 		anchors: ['page1', 'page2', 'page3'],
 	});
-
-	const sectionClass = ['section', 'h-screen'];
-
-	const bgImageMap = {
-		first: '@src/assets/mountain-fuji-1.jpg',
-		second: '',
-	};
-
 	const goToProject = () => {
 		console.log('go to project')
 	};
+	const pageComponentMap = [
+		{
+			component: FirstPage,
+			props: {
+				bgImage: '',
+				sloganText: '',
+				pageNumber: ''
+			},
+			event: {
+				goToProject,
+			},
+		},
+		{
+			component: SecondPage,
+			props: {
+				bgImage: '',
+				sloganText: 'Introduction',
+				pageNumber: 1,
+			},
+			event: {},
+		},
+	];
 </script>

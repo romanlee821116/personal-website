@@ -7,7 +7,6 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        page1: "url('../assets/mountain-fuji-1.jpg')",
       },
     },
   },
