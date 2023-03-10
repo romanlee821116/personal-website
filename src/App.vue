@@ -45,8 +45,8 @@
 			component: SecondPage,
 			props: {
 				bgImage: '',
-				sloganText: 'Introduction',
-				pageNumber: 1,
+				sloganText: 'INTRODUCTION',
+				pageNumber: '01',
 			},
 			event: {},
 		},

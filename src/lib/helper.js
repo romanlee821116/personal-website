@@ -1,0 +1,1 @@
+export const getPictureRelativePath = (pic, fileType = 'png') => `../../${pic}.${fileType}`;
