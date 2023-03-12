@@ -1,8 +1,11 @@
 <template>
-	<div
-		id="first-page"
-		class="flex flex-col justify-center bg-page1 section h-screen"
+	<PageWrap
+		:bgImage="bgImage"
 	>
+		<div
+			id="first-page"
+			class="flex  flex-col items-center justify-center h-full w-full"
+		>
 		<b>Hi! I'm</b>
 		<div class="text-4xl mt-4 mb-6">An Yi</div>
 		<button
@@ -11,15 +14,18 @@
 		>
 			VIEW MY WORKS
 		</button>
-	</div>
+		</div>
+	</PageWrap>
 </template>
 
 <script setup>
 import {defineProps} from 'vue';
+import PageWrap from './PageWrap.vue';
+
 const props = defineProps({
 	pageNumber: {
-		type: Number,
-		default: 0,
+		type: [String, Boolean],
+		default: false,
 	},
 	bgImage: {
 		type: String,
