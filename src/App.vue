@@ -20,6 +20,7 @@
 <script setup>
 	import FirstPage from './components/FirstPage.vue';
 	import SecondPage from './components/SecondPage.vue';
+	import ThirdPage from './components/ThirdPage.vue';
 	import { reactive } from 'vue';
 
 	const options = reactive({
@@ -50,5 +51,13 @@
 			},
 			event: {},
 		},
+		{
+			component: ThirdPage,
+			props: {
+				bgImage: '',
+				sloganText: 'ABILITIES',
+				pageNumber: '02',
+			},
+		}
 	];
 </script>

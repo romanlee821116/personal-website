@@ -5,7 +5,7 @@
 	>
 		<h1
 			v-if="pageNumber"
-			class="absolute left-4 top-4 text-6xl font-bold opacity-50 sm:left-12 sm:top-20 sm:text-9xl"
+			class="absolute right-4 top-4 text-6xl font-bold opacity-50 sm:left-12 sm:top-20 sm:text-9xl"
 		>
 			{{ pageNumber }}
 		</h1>

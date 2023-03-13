@@ -8,9 +8,9 @@
 			id="second-page"
 			class="h-full flex flex-col items-center justify-center sm:flex-row"
 		>
-			<div class="text-left mb-4 sm:mr-20">
+			<div class="text-left mb-8 sm:mr-20">
 				<img
-					class="w-40 rounded-full mb-4 mx-auto sm:w-64"
+					class="w-56 rounded-full mb-4 mx-auto sm:w-64"
 					:src="getPictureRelativePath('personal-pic')"
 					alt="personal-pic"
 				>
@@ -32,37 +32,10 @@
 					</a>
 				</div>
 			</div>
-			<div class="career-info px-4">
-				<h1 class="text-xl mb-4">工作 / 進修經歷</h1>
-				<div
-					v-for="(item, index) in careerInfoList"
-					:key="`career-item${index}`"
-					class="flex items-top mb-6"
-				>
-					<img
-						class="w-12 h-12 rounded-full mr-4 sm:w-16 sm:h-16"
-						:src="item.logo"
-						:alt="item.name"
-					>
-					<div>
-						<div class="career-title mb-1">
-							<b class="text-sm mr-2 sm:text-base">{{ item.title }}</b>
-							<span class="text-xs">{{ item.duration }}</span>
-						</div>
-						<div class="sub-title mb-1">
-							{{ item.subTitle }}
-						</div>
-						<ul class="career-desc">
-							<li
-								v-for="(descItem, descIndex) in item.desc"
-								:key="`desc-${descIndex}`"
-								class="text-sm list-disc ml-5"
-							>
-								{{ descItem }}
-							</li>
-						</ul>
-					</div>
-				</div>
+			<div class="px-6 text-sm sm:w-96">
+				<p class="mb-2">目前於Kkday新事業專案組擔任前端工程師，負責點對點交通服務前端畫面處理、功能串接、通用元件設計、單元測試撰寫等。</p>
+				<p>過去任職於美商產品專員，有跨國不同部門團隊溝通協商經驗，對工作細節有高度敏銳，具備專案流程進度掌控力。</p>
+
 			</div>
 		</div>
 	</PageWrap>
