@@ -26,16 +26,18 @@
 						:key="`contact-btn${index}`"
 						:href="item.url"
 						target="_blank"
-						class="text-3xl text-gray-500 hover:text-gray-600 mx-2"
+						class="text-3xl mx-2"
 					>
-						<i :class="item.icon" />
+						<i
+							class="text-gray-200 hover:text-gray-300"
+							:class="item.icon"
+						/>
 					</a>
 				</div>
 			</div>
-			<div class="px-6 text-sm sm:w-96">
-				<p class="mb-2">目前於Kkday新事業專案組擔任前端工程師，負責點對點交通服務前端畫面處理、功能串接、通用元件設計、單元測試撰寫等。</p>
+			<div class="px-6 text-sm sm:w-[480px]">
+				<p class="mb-4">目前於KKday擔任新事業專案組前端工程師，參與6項以上全新且已上線之專案開發。工作內容包含負責點對點交通服務前端畫面處理、功能串接、通用元件設計、單元測試撰寫等。</p>
 				<p>過去任職於美商產品專員，有跨國不同部門團隊溝通協商經驗，對工作細節有高度敏銳，具備專案流程進度掌控力。</p>
-
 			</div>
 		</div>
 	</PageWrap>

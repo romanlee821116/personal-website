@@ -6,62 +6,72 @@
 	>
 		<div
 			id="third-page"
-			class="h-full flex flex-col justify-center sm:flex-row"
+			class="h-full flex flex-col pt-10 sm:flex-row sm:items-center sm:justify-center"
 		>
-			<div class="career-info px-4">
-				<h1 class="text-xl mb-2 font-bold">工作 / 進修經歷</h1>
-				<div
-					v-for="(item, index) in careerInfoList"
-					:key="`career-item${index}`"
-					class="flex items-top mb-2"
-				>
-					<img
-						class="w-12 h-12 rounded-full mr-3 sm:w-16 sm:h-16"
-						:src="item.logo"
-						:alt="item.name"
-					>
-					<div>
-						<div class="career-title mb-1">
-							<b class="text-sm mr-2 sm:text-base">{{ item.title }}</b>
-							<span class="text-xs">{{ item.duration }}</span>
-						</div>
-						<div class="sub-title mb-1 text-sm">
-							{{ item.subTitle }}
-						</div>
-						<ul class="career-desc">
-							<li
-								v-for="(descItem, descIndex) in item.desc"
-								:key="`desc-${descIndex}`"
-								class="text-sm list-disc ml-5"
-							>
-								{{ descItem }}
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="px-4 py-2">
-				<h1 class="text-xl mb-2 font-bold">語言能力</h1>
-				<ul class="text-sm">
-					<li class="mb-1">英語 - 多益 : 940</li>
-					<li class="mb-1">英語 - 歐洲共同語文參考標準 : C2 Proficient</li>
-					<li class="mb-1">日語 - 日本語能力試驗 : N2</li>
-				</ul>
-			</div>
-			<div class="px-4 py-2">
-				<h1 class="text-xl mb-2 font-bold">應用技術</h1>
-				<div class="grid grid-cols-5">
+			<div class="sm:flex">
+				<div class="career-info px-4 py-2">
+					<h1 class="text-base mb-2 font-bold sm:mb-4">
+						工作 / 進修經歷
+					</h1>
 					<div
-						v-for="(skillItem, skillIndex) in skillList"
-						:key="`skill-${skillIndex}`"
-						class="m-2 text-center text-xs"
+						v-for="(item, index) in careerInfoList"
+						:key="`career-item${index}`"
+						class="flex items-top mb-2 sm:mb-6"
 					>
 						<img
-							:src="skillItem.img"
-							:alt="skillItem.name"
-							class="w-8 h-8 mx-auto"
+							class="w-12 h-12 rounded-full mr-3 sm:w-16 sm:h-16 sm:mr-6"
+							:src="item.logo"
+							:alt="item.name"
 						>
-						{{ skillItem.name }}
+						<div>
+							<div class="career-title mb-1">
+								<b class="text-sm mr-2 sm:text-base">{{ item.title }}</b>
+								<span class="text-xs">{{ item.duration }}</span>
+							</div>
+							<div class="sub-title mb-1 text-sm font-bold">
+								{{ item.subTitle }}
+							</div>
+							<ul class="career-desc">
+								<li
+									v-for="(descItem, descIndex) in item.desc"
+									:key="`desc-${descIndex}`"
+									class="text-sm list-disc ml-5"
+								>
+									{{ descItem }}
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="px-4 py-2 sm:mb-12">
+						<h1 class="text-base mb-2 font-bold sm:mb-4">
+							語言能力
+						</h1>
+						<ul class="text-sm">
+							<li class="mb-1">英語 - 多益 : 940</li>
+							<li class="mb-1">英語 - 歐洲共同語文參考標準 : C2 Proficient</li>
+							<li class="mb-1">日語 - 日本語能力試驗 : N2</li>
+						</ul>
+					</div>
+					<div class="px-4 py-2">
+						<h1 class="text-base mb-2 font-bold sm:mb-4">
+							應用技術
+						</h1>
+						<div class="grid grid-cols-5">
+							<div
+								v-for="(skillItem, skillIndex) in skillList"
+								:key="`skill-${skillIndex}`"
+								class="m-2 text-center text-xs"
+							>
+								<img
+									:src="skillItem.img"
+									:alt="skillItem.name"
+									class="w-8 h-8 mx-auto sm:mb-1"
+								>
+								{{ skillItem.name }}
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -92,7 +102,7 @@ const props = defineProps({
 const careerInfoList = [
 	{
 		title: 'KKday酷遊天國際旅行社',
-		subTitle: '前端工程師',
+		subTitle: '新事業專案組 - 前端工程師',
 		logo: getPictureRelativePath('kkday-icon'),
 		duration: '2021, Oct - Now',
 		desc: ['點對點服務PC/M前端開發', '通用元件設計, 單元測試撰寫', '系統維運'],
