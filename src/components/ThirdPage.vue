@@ -9,7 +9,7 @@
 			class="h-full flex flex-col pt-10 sm:flex-row sm:items-center sm:justify-center"
 		>
 			<div class="sm:flex">
-				<div class="career-info px-4 py-2">
+				<div class="career-info px-4 py-2 mr-6">
 					<h1 class="text-base mb-2 font-bold sm:mb-4">
 						工作 / 進修經歷
 					</h1>
@@ -49,9 +49,11 @@
 							語言能力
 						</h1>
 						<ul class="text-sm">
-							<li class="mb-1">英語 - 多益 : 940</li>
-							<li class="mb-1">英語 - 歐洲共同語文參考標準 : C2 Proficient</li>
-							<li class="mb-1">日語 - 日本語能力試驗 : N2</li>
+							<li
+								v-for="(langItem, langIndex) in langAbilityList"
+								:key="`langItem-${langIndex}`"
+								class="mb-1"
+							>{{ langItem }}</li>
 						</ul>
 					</div>
 					<div class="px-4 py-2">
@@ -99,27 +101,44 @@ const props = defineProps({
 	},
 });
 
+const langAbilityList = [
+	'英語 - 多益 : 940',
+	'英語 - 歐洲共同語文參考標準 : C2 Proficient',
+	'日語 - 日本語能力試驗 : N2',
+];
+
 const careerInfoList = [
 	{
 		title: 'KKday酷遊天國際旅行社',
 		subTitle: '新事業專案組 - 前端工程師',
 		logo: getPictureRelativePath('kkday-icon'),
 		duration: '2021, Oct - Now',
-		desc: ['點對點服務PC/M前端開發', '通用元件設計, 單元測試撰寫', '系統維運'],
+		desc: [
+			'點對點服務PC / M前端開發, 參與7項以上已上線專案開發',
+			'網頁效能優化, 設計模板開發, 通用元件設計',
+			'系統維運, 單元測試撰寫'
+		],
 	},
 	{
 		title: '緯育TibaMe',
 		subTitle: 'Web/APP前端設計工程師養成班學員',
 		logo: getPictureRelativePath('tibame-icon'),
 		duration: '2021, Mar -2021, Aug',
-		desc: ['個人專體最佳個人網站第1名', '帶領5人小組進行團體專題開發, 保持專案高完整度'],
+		desc: [
+			'個人專體最佳個人網站第1名',
+			'帶領5人小組進行團體專題開發, 保持專案高完整度'
+		],
 	},
 	{
 		title: '美商欣科寶利股份公司',
 		subTitle: '產品技術專員',
 		logo: getPictureRelativePath('polysciences-icon'),
 		duration: '2019, Dec - 2021, Feb',
-		desc: ['專責亞太區生物產品服務', '0到1將主力GMP商品導入中國市場', '解決各國經銷商客戶痛點'],
+		desc: [
+			'專責亞太區生物產品服務',
+			'0到1將主力GMP商品導入中國市場',
+			'解決各國經銷商客戶痛點'
+		],
 	},
 ];
 

@@ -79,28 +79,4 @@ const contactBtnList = [
 		url: 'mailto: romanlee1116@gmail.com',
 	}
 ];
-
-const careerInfoList = [
-	{
-		title: 'KKday酷遊天國際旅行社',
-		subTitle: '前端工程師',
-		logo: getPictureRelativePath('kkday-icon'),
-		duration: '2021,Oct - Now',
-		desc: ['點對點服務PC/M前端開發', '通用元件設計, 單元測試撰寫', '系統維運'],
-	},
-	{
-		title: '緯育TibaMe',
-		subTitle: 'Web/APP前端設計工程師養成班學員',
-		logo: getPictureRelativePath('tibame-icon'),
-		duration: '2021,Mar -2021,Aug',
-		desc: ['個人專體最佳個人網站第1名', '帶領5人小組進行團體專題開發, 保持專案高完整度'],
-	},
-	{
-		title: '美商欣科寶利股份有限公司',
-		subTitle: '產品技術專員',
-		logo: getPictureRelativePath('polysciences-icon'),
-		duration: '2019,Dec - 2021,Feb',
-		desc: ['專責亞太區生物產品服務', '0到1將主力GMP商品導入中國市場', '解決各國經銷商客戶痛點'],
-	},
-];
 </script>
