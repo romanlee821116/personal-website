@@ -4,23 +4,39 @@
 	>
 		<div
 			id="first-page"
-			class="flex  flex-col items-center justify-center h-full w-full"
+			class="flex flex-col items-center justify-center h-full w-full relative"
 		>
-		<b>Hi! I'm</b>
-		<div class="text-4xl mt-4 mb-6">An Yi</div>
-		<button
-			@click="$emit('goToProject')"
-			class="text-sm hover:bg-gray-500 border-none focus:outline-none transition duration-200 ease-out hover:ease-in"
-		>
-			VIEW MY WORKS
-		</button>
+			<b>Hi! I'm</b>
+			<div class="text-4xl mt-4 mb-6">Roman</div>
+			<button
+				@click="goToProject"
+				class="text-sm bg-gray-500 hover:bg-gray-600 border-none focus:outline-none transition duration-200 ease-out hover:ease-in opacity-80"
+			>
+				VIEW MY WORKS
+			</button>
+			<div
+				id="language-btn"
+				class="absolute top-6 right-6 flex items-center text-sm"
+			>
+				<div
+					v-for="(item, index) in langList"
+					:key="`lang-bnt${index}`"
+					class="mx-1 px-3 py-1 border border-gray-500 rounded-md cursor-pointer"
+					:class="{'active': isCurrentLang(item.langKey)}"
+					@click="switchLang(item.langKey)"
+				>
+					{{ item.value }}
+				</div>
+			</div>
 		</div>
 	</PageWrap>
 </template>
 
 <script setup>
-import {defineProps} from 'vue';
 import PageWrap from './PageWrap.vue';
+import {useI18n} from 'vue-i18n';
+
+const {locale} = useI18n();
 
 const props = defineProps({
 	pageNumber: {
@@ -32,4 +48,34 @@ const props = defineProps({
 		required: true,
 	},
 });
+
+const emit = defineEmits(['switchLang', 'goToProject']);
+
+const langList = [
+	{
+		langKey: 'tw',
+		value: '中文',
+	},
+	{
+		langKey: 'en',
+		value: 'EN',
+	},
+];
+
+const isCurrentLang = lang => lang === locale.value;
+
+const switchLang = lang => {
+	if (lang !== locale.value) {
+		emit('switchLang', lang);
+	}
+};
+
+const goToProject = () => emit('goToProject');
+
 </script>
+
+<style scoped>
+	#language-btn div.active {
+		background-color: gray;
+	}
+</style>

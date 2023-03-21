@@ -15,10 +15,10 @@
 					alt="personal-pic"
 				>
 				<div class="mx-auto text-sm w-fit">
-					碩士 - 台灣大學分子與細胞生物學研究所
+					{{ lang('master') }}
 				</div>
 				<div class="mx-auto text-sm w-fit">
-					學士 - 中興大學生物科技學士學位學程
+					{{ lang('bachelor') }}
 				</div>
 				<div class="flex justify-center mt-2">
 					<a
@@ -36,16 +36,22 @@
 				</div>
 			</div>
 			<div class="px-6 text-sm sm:w-[480px]">
-				<p class="mb-4">目前於KKday擔任新事業專案組前端工程師，參與6項以上全新且已上線之專案開發。工作內容包含負責點對點交通服務前端畫面處理、功能串接、通用元件設計、單元測試撰寫等。</p>
-				<p>過去任職於美商產品專員，有跨國不同部門團隊溝通協商經驗，對工作細節有高度敏銳，具備專案流程進度掌控力。</p>
+				<p class="mb-4">
+					{{ lang('intro_1') }}
+				</p>
+				<p>
+					{{ lang('intro_2') }}
+				</p>
 			</div>
 		</div>
 	</PageWrap>
 </template>
 <script setup>
-import {defineProps} from 'vue';
+import {inject} from 'vue';
 import PageWrap from './PageWrap.vue';
 import {getPictureRelativePath} from '../lib/helper';
+
+const lang = inject('lang');
 
 const props = defineProps({
 	pageNumber: {
