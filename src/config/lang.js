@@ -1,5 +1,4 @@
 export const tw = {
-    hello: 'こんにちは、世界',
     master: '碩士 - 台灣大學分子與細胞生物學研究所',
     bachelor: '學士 - 中興大學生物科技學士學位學程',
     intro_1: '目前於KKday擔任新事業專案組前端工程師，參與6項以上全新且已上線之專案開發。工作內容包含負責點對點交通服務前端畫面處理、功能串接、通用元件設計、單元測試撰寫等。',
@@ -27,11 +26,10 @@ export const tw = {
 };
 
 export const en = {
-    hello: 'hello world',
     master: 'MS - NTU, Institute of Molecular and Cellular Biology',
     bachelor: 'BS - NCHU, Biotechnology',
-    intro_1: '目前於KKday擔任新事業專案組前端工程師，參與6項以上全新且已上線之專案開發。工作內容包含負責點對點交通服務前端畫面處理、功能串接、通用元件設計、單元測試撰寫等。',
-    intro_2: '過去任職於美商產品專員，有跨國不同部門團隊溝通協商經驗，對工作細節有高度敏銳，具備專案流程進度掌控力。',
+    intro_1: 'Currently working as a Frontend Engineer at KKday, involved in the development of 6+ launched projects. Job description includes processing frontend views of point-to-point transportation services, integrating functionalities, designing generic components, and unit tests writing.',
+    intro_2: 'Previously worked as a Product Specialist in a US-based company, with experience in cross-functional and cross-border communication and negotiation. Highly sensitive to work details and possesses strong project management skills to control project progress.',
     page3_work_title: 'Work/Training Experience',
     page3_lang_title: 'Language Ability',
     page3_skill_title: 'Web Skills',
@@ -41,7 +39,7 @@ export const en = {
     career_title_kkday: 'KKday',
     career_subtitle_kkday: 'New Business Team - Front-End Developer',
     career_desc_kkday_1: '點對點服務PC / M前端開發, 參與7項以上已上線專案開發',
-    career_desc_kkday_2: '網頁效能優化, 設計模板開發, 通用元件設計',
+    career_desc_kkday_2: 'Web performance optimization, template design and development, and generic component design',
     career_desc_kkday_3: '系統維運, 單元測試撰寫',
     career_title_tibame: 'Wiedu TibaMe',
     career_subtitle_tibame: 'Web/APP前端設計工程師養成班學員',
