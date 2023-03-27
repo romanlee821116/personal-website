@@ -10,11 +10,12 @@ const messages = {
 	en,
 };
 
-export const i18n = createI18n({
+const i18n = createI18n({
 	legacy: false,
 	locale: 'tw',
 	fallbackLocale: 'tw',
 	messages,
+	globalInjection: true,
 });
 
 const app = createApp(App)
@@ -22,5 +23,4 @@ const app = createApp(App)
 	.use(i18n);
 
 app.config.globalProperties.lang = i18n.global.t;
-app.provide('lang', i18n.global.t);
 app.mount('#app');

@@ -47,11 +47,8 @@
 	</PageWrap>
 </template>
 <script setup>
-import {inject} from 'vue';
 import PageWrap from './PageWrap.vue';
 import {getPictureRelativePath} from '../lib/helper';
-
-const lang = inject('lang');
 
 const props = defineProps({
 	pageNumber: {

@@ -11,7 +11,7 @@
 			<div class="sm:flex">
 				<div class="career-info px-4 py-2 mr-6">
 					<h1 class="text-base mb-2 font-bold sm:mb-4">
-						工作 / 進修經歷
+						{{ lang('page3_work_title') }}
 					</h1>
 					<div
 						v-for="(item, index) in careerInfoList"
@@ -25,11 +25,11 @@
 						>
 						<div>
 							<div class="career-title mb-1">
-								<b class="text-sm mr-2 sm:text-base">{{ item.title }}</b>
+								<b class="text-sm mr-2 sm:text-base">{{ lang(item.title) }}</b>
 								<span class="text-xs">{{ item.duration }}</span>
 							</div>
 							<div class="sub-title mb-1 text-sm font-bold">
-								{{ item.subTitle }}
+								{{ lang(item.subTitle) }}
 							</div>
 							<ul class="career-desc">
 								<li
@@ -37,7 +37,7 @@
 									:key="`desc-${descIndex}`"
 									class="text-sm list-disc ml-5"
 								>
-									{{ descItem }}
+									{{ lang(descItem) }}
 								</li>
 							</ul>
 						</div>
@@ -46,19 +46,21 @@
 				<div>
 					<div class="px-4 py-2 sm:mb-12">
 						<h1 class="text-base mb-2 font-bold sm:mb-4">
-							語言能力
+							<!-- 語言能力 -->
+							{{ lang('page3_lang_title') }}
 						</h1>
 						<ul class="text-sm">
 							<li
 								v-for="(langItem, langIndex) in langAbilityList"
 								:key="`langItem-${langIndex}`"
 								class="mb-1"
-							>{{ langItem }}</li>
+							>{{ lang(langItem) }}</li>
 						</ul>
 					</div>
 					<div class="px-4 py-2">
 						<h1 class="text-base mb-2 font-bold sm:mb-4">
-							應用技術
+							<!-- 應用技術 -->
+							{{ lang('page3_skill_title') }}
 						</h1>
 						<div class="grid grid-cols-5">
 							<div
@@ -102,42 +104,42 @@ const props = defineProps({
 });
 
 const langAbilityList = [
-	'英語 - 多益 : 940',
-	'英語 - 歐洲共同語文參考標準 : C2 Proficient',
-	'日語 - 日本語能力試驗 : N2',
+	'lang_desc_1',
+	'lang_desc_2',
+	'lang_desc_3',
 ];
 
 const careerInfoList = [
 	{
-		title: 'KKday酷遊天國際旅行社',
-		subTitle: '新事業專案組 - 前端工程師',
+		title: 'career_title_kkday',
+		subTitle: 'career_subtitle_kkday',
 		logo: getPictureRelativePath('kkday-icon'),
 		duration: '2021, Oct - Now',
 		desc: [
-			'點對點服務PC / M前端開發, 參與7項以上已上線專案開發',
-			'網頁效能優化, 設計模板開發, 通用元件設計',
-			'系統維運, 單元測試撰寫'
+			'career_desc_kkday_1',
+			'career_desc_kkday_2',
+			'career_desc_kkday_3'
 		],
 	},
 	{
-		title: '緯育TibaMe',
-		subTitle: 'Web/APP前端設計工程師養成班學員',
+		title: 'career_title_tibame',
+		subTitle: 'career_subtitle_tibame',
 		logo: getPictureRelativePath('tibame-icon'),
 		duration: '2021, Mar -2021, Aug',
 		desc: [
-			'個人專體最佳個人網站第1名',
-			'帶領5人小組進行團體專題開發, 保持專案高完整度'
+			'career_desc_tibame_1',
+			'career_desc_tibame_2'
 		],
 	},
 	{
-		title: '美商欣科寶利股份公司',
-		subTitle: '產品技術專員',
+		title: 'career_title_polysciences',
+		subTitle: 'career_subtitle_polysciences',
 		logo: getPictureRelativePath('polysciences-icon'),
 		duration: '2019, Dec - 2021, Feb',
 		desc: [
-			'專責亞太區生物產品服務',
-			'0到1將主力GMP商品導入中國市場',
-			'解決各國經銷商客戶痛點'
+			'career_desc_polysciences_1',
+			'career_desc_polysciences_2',
+			'career_desc_polysciences_3'
 		],
 	},
 ];

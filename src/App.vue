@@ -25,7 +25,9 @@ import ThirdPage from './components/ThirdPage.vue';
 import ForthPage from './components/FourthPage.vue';
 import {reactive} from 'vue';
 import {getPictureRelativePath} from './lib/helper';
-import {i18n} from './main.js';
+import {useI18n} from 'vue-i18n'
+
+const { locale } = useI18n();
 
 const options = reactive({
 	menu: '#menu',
@@ -36,9 +38,7 @@ const goToProject = () => {
 	console.log('go to project')
 };
 
-const switchLang = function(lang) {
-	i18n.global.locale.value = lang;
-};
+const switchLang = lang => locale.value = lang;
 
 const pageComponentMap = [
 	{
