@@ -38,7 +38,10 @@ const goToProject = () => {
 	console.log('go to project')
 };
 
-const switchLang = lang => locale.value = lang;
+const switchLang = lang => {
+	locale.value = lang;
+	sessionStorage.setItem('currentLang', lang);
+};
 
 const pageComponentMap = [
 	{

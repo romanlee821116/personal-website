@@ -12,7 +12,7 @@ const messages = {
 
 const i18n = createI18n({
 	legacy: false,
-	locale: 'tw',
+	locale: sessionStorage.getItem('currentLang') ?? 'tw',
 	fallbackLocale: 'tw',
 	messages,
 	globalInjection: true,

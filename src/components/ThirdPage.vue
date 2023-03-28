@@ -9,7 +9,7 @@
 			class="h-full flex flex-col pt-10 sm:flex-row sm:items-center sm:justify-center"
 		>
 			<div class="sm:flex">
-				<div class="career-info px-4 py-2 mr-6">
+				<div class="career-info px-4 py-2 mr-6 sm:w-[540px]">
 					<h1 class="text-base mb-2 font-bold sm:mb-4">
 						{{ lang('page3_work_title') }}
 					</h1>
