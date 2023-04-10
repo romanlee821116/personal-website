@@ -8,40 +8,46 @@
 			id="second-page"
 			class="h-full flex flex-col items-center justify-center sm:flex-row"
 		>
-			<div class="text-left mb-8 sm:mr-20">
+			<div class="text-left mb-8 sm:mr-20 img-wrap relative">
 				<img
-					class="w-56 rounded-full mb-4 mx-auto sm:w-64"
-					:src="getPictureRelativePath('personal-pic')"
+					class="w-56 rounded-full mx-auto sm:w-80 sm:rounded-none personal-pic"
+					:src="getPictureRelativePath('myself')"
 					alt="personal-pic"
 				>
-				<div class="mx-auto text-sm w-fit">
-					{{ lang('master') }}
-				</div>
-				<div class="mx-auto text-sm w-fit">
-					{{ lang('bachelor') }}
-				</div>
-				<div class="flex justify-center mt-2">
-					<a
-						v-for="(item, index) in contactBtnList"
-						:key="`contact-btn${index}`"
-						:href="item.url"
-						target="_blank"
-						class="text-3xl mx-2"
-					>
-						<i
-							class="text-gray-200 hover:text-gray-300"
-							:class="item.icon"
-						/>
-					</a>
-				</div>
 			</div>
-			<div class="px-6 text-sm sm:w-[480px]">
+			<div class="px-6 text-sm sm:w-[480px] sm:px-0">
 				<p class="mb-4">
 					{{ lang('intro_1') }}
 				</p>
 				<p>
 					{{ lang('intro_2') }}
 				</p>
+				<div class="mt-8">
+					<p class="text-base mb-3 font-bold">
+						<i class="fas fa-square text-titleGreen mr-1" />
+						{{ lang('education') }}
+					</p>
+					<div class="text-sm w-fit">
+						{{ lang('master') }}
+					</div>
+					<div class="text-sm w-fit">
+						{{ lang('bachelor') }}
+					</div>
+					<div class="flex mt-6">
+						<a
+							v-for="(item, index) in contactBtnList"
+							:key="`contact-btn${index}`"
+							:href="item.url"
+							target="_blank"
+							class="text-3xl mr-4"
+						>
+							<i
+								class="text-gray-200 hover:text-gray-500 ease-linear duration-100"
+								:class="item.icon"
+							/>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</PageWrap>
@@ -83,3 +89,27 @@ const contactBtnList = [
 	}
 ];
 </script>
+
+<style lang="scss" scoped>
+	.personal-pic {
+		display: inline;
+		position: relative;
+		box-shadow: 15px 15px 0 rgba($color: #9CC69B, $alpha: .4);
+	}
+
+	.img-wrap {
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: -15px;
+			left: -15px;
+			display: block;
+			width: 150px;
+			height: 150px;
+			border-top: 4px solid rgba($color: #9CC69B, $alpha: .4);
+			border-left: 4px solid rgba($color: #9CC69B, $alpha: .4);
+		}
+	}
+</style>

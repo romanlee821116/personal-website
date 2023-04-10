@@ -11,6 +11,7 @@
 			<div class="sm:flex">
 				<div class="career-info px-4 py-2 mr-6 sm:w-[540px]">
 					<h1 class="text-base mb-2 font-bold sm:mb-4">
+						<i class="fas fa-square text-titleGreen mr-1" />
 						{{ lang('page3_work_title') }}
 					</h1>
 					<div
@@ -46,7 +47,7 @@
 				<div>
 					<div class="px-4 py-2 sm:mb-12">
 						<h1 class="text-base mb-2 font-bold sm:mb-4">
-							<!-- 語言能力 -->
+							<i class="fas fa-square text-titleGreen mr-1" />
 							{{ lang('page3_lang_title') }}
 						</h1>
 						<ul class="text-sm">
@@ -59,7 +60,7 @@
 					</div>
 					<div class="px-4 py-2">
 						<h1 class="text-base mb-2 font-bold sm:mb-4">
-							<!-- 應用技術 -->
+							<i class="fas fa-square text-titleGreen mr-1" />
 							{{ lang('page3_skill_title') }}
 						</h1>
 						<div class="grid grid-cols-5">

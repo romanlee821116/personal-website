@@ -1,4 +1,5 @@
 export const tw = {
+	education: '學歷',
 	master: '碩士 - 台灣大學分子與細胞生物學研究所',
 	bachelor: '學士 - 中興大學生物科技學士學位學程',
 	intro_1: '目前於KKday擔任新事業專案組前端工程師，參與7+項全新且已上線之專案開發。工作內容包含負責點對點交通服務前端畫面處理、功能串接、通用元件設計、單元測試撰寫等。',
@@ -26,6 +27,7 @@ export const tw = {
 };
 
 export const en = {
+	education: 'Education',
 	master: 'MS - NTU, Institute of Molecular and Cellular Biology',
 	bachelor: 'BS - NCHU, Biotechnology',
 	intro_1: 'Currently working as a Frontend Engineer at KKday, involved in the development of 7+ online projects. Job description includes processing frontend views of point-to-point transportation services, integrating functionalities, designing generic components, and unit tests writing.',

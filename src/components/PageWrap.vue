@@ -7,13 +7,13 @@
 		<div class="mask w-full h-full absolute top-0 left-0 bg-black opacity-80"></div>
 		<h1
 			v-if="pageNumber"
-			class="absolute right-4 top-4 text-6xl font-bold opacity-50 sm:left-12 sm:top-20 sm:text-9xl z-10"
+			class="absolute right-4 top-4 text-6xl font-bold opacity-50 sm:right-12 sm:top-20 sm:text-9xl z-99"
 		>
 			{{ pageNumber }}
 		</h1>
 		<h3
 			v-if="sloganText"
-			class="hidden slogan-text absolute left-8 bottom-40 text-2xl font-bold -rotate-90 opacity-50 sm:block z-10"
+			class="hidden slogan-text absolute right-8 bottom-40 text-2xl font-bold -rotate-90 opacity-50 sm:block z-99"
 		>
 			{{ sloganText }}
 		</h3>

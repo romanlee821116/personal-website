@@ -10,7 +10,7 @@
 			<div class="text-4xl mt-4 mb-6">Roman</div>
 			<button
 				@click="goToProject"
-				class="text-sm bg-gray-500 hover:bg-gray-600 border-none focus:outline-none transition duration-200 ease-out hover:ease-in opacity-80"
+				class="text-sm bg-titleGreen hover:opacity-50 border-none focus:outline-none transition duration-200 ease-out hover:ease-in opacity-80"
 			>
 				VIEW MY WORKS
 			</button>
@@ -21,7 +21,7 @@
 				<div
 					v-for="(item, index) in langList"
 					:key="`lang-bnt${index}`"
-					class="mx-1 px-3 py-1 border border-gray-500 rounded-md cursor-pointer"
+					class="mx-1 px-3 py-1 border border-gray rounded-md cursor-pointer"
 					:class="{'active': isCurrentLang(item.langKey)}"
 					@click="switchLang(item.langKey)"
 				>
@@ -76,6 +76,7 @@ const goToProject = () => emit('goToProject');
 
 <style scoped>
 	#language-btn div.active {
-		background-color: gray;
+		background-color: #5C7261;
+		border-color: #5C7261;
 	}
 </style>
