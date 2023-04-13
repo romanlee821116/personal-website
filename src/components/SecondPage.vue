@@ -24,7 +24,7 @@
 				</p>
 				<div class="mt-8">
 					<p class="text-base mb-3 font-bold">
-						<i class="fas fa-square text-titleGreen mr-1" />
+						<i class="fas fa-square text-primary-green mr-1" />
 						{{ lang('education') }}
 					</p>
 					<div class="text-sm w-fit">
@@ -42,7 +42,7 @@
 							class="text-3xl mr-4"
 						>
 							<i
-								class="text-gray-200 hover:text-gray-500 ease-linear duration-100"
+								class="text-gray-200 hover:text-primary-green ease-linear duration-100"
 								:class="item.icon"
 							/>
 						</a>
@@ -92,9 +92,11 @@ const contactBtnList = [
 
 <style lang="scss" scoped>
 	.personal-pic {
-		display: inline;
-		position: relative;
 		box-shadow: 15px 15px 0 rgba($color: #9CC69B, $alpha: .4);
+
+		@media (max-width: 575px) {
+			box-shadow: 5px 5px 0 rgba($color: #9CC69B, $alpha: .4);
+		}
 	}
 
 	.img-wrap {
@@ -110,6 +112,11 @@ const contactBtnList = [
 			height: 150px;
 			border-top: 4px solid rgba($color: #9CC69B, $alpha: .4);
 			border-left: 4px solid rgba($color: #9CC69B, $alpha: .4);
+		}
+		@media (max-width: 575px) {
+			&::after {
+				display: none;
+			}
 		}
 	}
 </style>

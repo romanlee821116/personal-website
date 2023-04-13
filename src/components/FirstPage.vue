@@ -10,7 +10,7 @@
 			<div class="text-4xl mt-4 mb-6">Roman</div>
 			<button
 				@click="goToProject"
-				class="text-sm bg-titleGreen hover:opacity-50 border-none focus:outline-none transition duration-200 ease-out hover:ease-in opacity-80"
+				class="text-sm bg-primary-green hover:opacity-50 border-none focus:outline-none transition duration-200 ease-out hover:ease-in opacity-80"
 			>
 				VIEW MY WORKS
 			</button>
