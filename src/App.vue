@@ -27,7 +27,7 @@ import {reactive} from 'vue';
 import {getPictureRelativePath} from './lib/helper';
 import {useI18n} from 'vue-i18n'
 
-const { locale } = useI18n();
+const {locale} = useI18n();
 
 const options = reactive({
 	menu: '#menu',
