@@ -14,6 +14,20 @@
 					:src="getPictureRelativePath('myself')"
 					alt="personal-pic"
 				>
+				<div class="flex justify-center mt-8">
+					<a
+						v-for="(item, index) in contactBtnList"
+						:key="`contact-btn${index}`"
+						:href="item.url"
+						target="_blank"
+						class="text-3xl mr-4"
+					>
+						<i
+							class="text-gray-200 hover:text-primary-green ease-linear duration-100 mx-auto"
+							:class="item.icon"
+						/>
+					</a>
+				</div>
 			</div>
 			<div class="px-6 text-sm sm:w-[480px] sm:px-0">
 				<p class="mb-4">
@@ -27,25 +41,25 @@
 						<i class="fas fa-square text-primary-green mr-1" />
 						{{ lang('education') }}
 					</p>
-					<div class="text-sm w-fit">
-						{{ lang('master') }}
-					</div>
-					<div class="text-sm w-fit">
-						{{ lang('bachelor') }}
-					</div>
-					<div class="flex mt-6">
-						<a
-							v-for="(item, index) in contactBtnList"
-							:key="`contact-btn${index}`"
-							:href="item.url"
-							target="_blank"
-							class="text-3xl mr-4"
-						>
-							<i
-								class="text-gray-200 hover:text-primary-green ease-linear duration-100"
-								:class="item.icon"
-							/>
-						</a>
+					<div class="flex items-center">
+						<div class="mr-4 sm:mr-8">
+							<div class="text-sm w-fit">
+								{{ lang('master') }}
+							</div>
+							<div class="text-sm w-fit">
+								{{ lang('bachelor') }}
+							</div>
+						</div>
+						<div class="sm:flex">
+							<img
+								class="w-12 sm:w-16 mx-2 mb-2"
+								:src="getPictureRelativePath('ntu-logo')" alt="ntu-logo"
+							>
+							<img
+								class="w-12 sm:w-16 mx-2"
+								:src="getPictureRelativePath('nchu-logo')" alt="ntu-logo"
+							>
+						</div>
 					</div>
 				</div>
 			</div>
