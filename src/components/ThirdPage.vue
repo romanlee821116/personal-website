@@ -36,7 +36,7 @@
 								<li
 									v-for="(descItem, descIndex) in item.desc"
 									:key="`desc-${descIndex}`"
-									class="text-sm list-disc ml-5"
+									class="text-sm list-disc ml-5 mb-1"
 								>
 									{{ lang(descItem) }}
 								</li>
@@ -119,7 +119,7 @@ const careerInfoList = [
 		desc: [
 			'career_desc_kkday_1',
 			'career_desc_kkday_2',
-			'career_desc_kkday_3'
+			'career_desc_kkday_3',
 		],
 	},
 	{
@@ -129,7 +129,8 @@ const careerInfoList = [
 		duration: '2021, Mar -2021, Aug',
 		desc: [
 			'career_desc_tibame_1',
-			'career_desc_tibame_2'
+			'career_desc_tibame_2',
+			'career_desc_tibame_3',
 		],
 	},
 	{
@@ -140,7 +141,7 @@ const careerInfoList = [
 		desc: [
 			'career_desc_polysciences_1',
 			'career_desc_polysciences_2',
-			'career_desc_polysciences_3'
+			'career_desc_polysciences_3',
 		],
 	},
 ];

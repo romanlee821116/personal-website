@@ -10,7 +10,7 @@
 		>
 			<div class="text-left mb-8 sm:mr-20 img-wrap relative">
 				<img
-					class="w-56 rounded-full mx-auto sm:w-80 sm:rounded-none personal-pic"
+					class="w-56 h-fit rounded-full mx-auto sm:w-80 sm:rounded-none personal-pic"
 					:src="getPictureRelativePath('myself')"
 					alt="personal-pic"
 				>
@@ -41,24 +41,18 @@
 						<i class="fas fa-square text-primary-green mr-1" />
 						{{ lang('education') }}
 					</p>
-					<div class="flex items-center">
-						<div class="mr-4 sm:mr-8">
-							<div class="text-sm w-fit">
-								{{ lang('master') }}
-							</div>
-							<div class="text-sm w-fit">
-								{{ lang('bachelor') }}
-							</div>
-						</div>
-						<div class="sm:flex">
+					<div>
+						<div
+							v-for="(item, index) in educationList"
+							:key="`education-item${index}`"
+							class="flex items-center mb-2"
+						>
 							<img
-								class="w-12 sm:w-16 mx-2 mb-2"
-								:src="getPictureRelativePath('ntu-logo')" alt="ntu-logo"
+								:src="getPictureRelativePath(item.img)"
+								:alt="item.img"
+								class="w-12 sm:w-14 sm:h-fit mx-2 mb-2"
 							>
-							<img
-								class="w-12 sm:w-16 mx-2"
-								:src="getPictureRelativePath('nchu-logo')" alt="ntu-logo"
-							>
+							<span>{{ lang(item.text) }}</span>
 						</div>
 					</div>
 				</div>
@@ -102,6 +96,20 @@ const contactBtnList = [
 		url: 'mailto: romanlee1116@gmail.com',
 	}
 ];
+
+const educationList = [
+	{
+		text: 'master',
+		img: 'ntu-logo',
+	},
+	{
+		text: 'bachelor',
+		img: 'nchu-logo',
+	},
+];
+
+const schoolList = ['ntu-logo', 'nchu-logo'];
+
 </script>
 
 <style lang="scss" scoped>
