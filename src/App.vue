@@ -1,21 +1,28 @@
 
 <template>
-	<FullPage
-		ref="fullpage"
-		:options="options"
-		id="full-page"
-	>
-		<template
-			v-for="(item, index) in pageComponentMap"
-			:key="`page-${index}`"
+	<div class="relative">
+		<FullPage
+			ref="fullpage"
+			:options="options"
+			id="full-page"
 		>
-			<component
-				:is="item.component"
-				v-bind="{...item.props}"
-				v-on="{...item.event}"
-			/>
-		</template>
-	</FullPage>
+			<template
+				v-for="(item, index) in pageComponentMap"
+				:key="`page-${index}`"
+			>
+				<component
+					:is="item.component"
+					v-bind="{...item.props}"
+					v-on="{...item.event}"
+				/>
+			</template>
+		</FullPage>
+		<ImageModal
+			:is-open="isModalOpen"
+			:image-list="modalImageList"
+			@close="closeModal"
+		/>
+	</div>
 </template>
 
 <script setup>
@@ -23,9 +30,10 @@ import FirstPage from './components/FirstPage.vue';
 import SecondPage from './components/SecondPage.vue';
 import ThirdPage from './components/ThirdPage.vue';
 import ForthPage from './components/FourthPage.vue';
-import {reactive} from 'vue';
+import {reactive, ref} from 'vue';
 import {getPictureRelativePath} from './lib/helper';
-import {useI18n} from 'vue-i18n'
+import {useI18n} from 'vue-i18n';
+import ImageModal from './components/ImageModal.vue';
 
 const {locale} = useI18n();
 
@@ -42,6 +50,20 @@ const switchLang = lang => {
 	locale.value = lang;
 	sessionStorage.setItem('currentLang', lang);
 };
+
+let isModalOpen = ref(false);
+
+let modalImageList = ref([]);
+
+const showMoreImage = item => {
+	console.log('showMoreImage =', item)
+	if (item.imgList.length > 0) {
+		modalImageList.value = item.imgList;
+		isModalOpen.value = true;
+	}
+};
+
+const closeModal = () => isModalOpen.value = false;
 
 const pageComponentMap = [
 	{
@@ -79,6 +101,9 @@ const pageComponentMap = [
 			bgImage: getPictureRelativePath('mountain-1'),
 			sloganText: 'PROFOLIO',
 			pageNumber: '03',
+		},
+		event: {
+			showMoreImage,
 		},
 	}
 ];
