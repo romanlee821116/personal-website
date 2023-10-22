@@ -25,6 +25,7 @@ export const tw = {
 	career_desc_polysciences_1: '0到1將主力GMP商品導入中國市場',
 	career_desc_polysciences_2: '亞太區生物產品技術指導, 貿易金物流安排',
 	career_desc_polysciences_3: '與美國總公司協商經銷策略',
+	link: '網站連結',
 };
 
 export const en = {
@@ -54,4 +55,5 @@ export const en = {
 	career_desc_polysciences_1: "Introducing the company's flagship GMP-grade products into the Chinese market from zero to one.",
 	career_desc_polysciences_2: 'Technical guidance on bioproducts, supplier trading, and financial logistics arrangements in the Asia-Pacific region.',
 	career_desc_polysciences_3: 'Negotiating distribution strategies with the US headquarters.',
+	link: 'Website',
 };
