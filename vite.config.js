@@ -6,5 +6,5 @@ import path from 'path';
 export default defineConfig({
   plugins: [vue()],
   resolve: {},
-  base: '/personal-website/',
+  base: './',
 })
