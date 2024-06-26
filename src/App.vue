@@ -39,11 +39,11 @@ const {locale} = useI18n();
 
 const options = reactive({
 	menu: '#menu',
-	anchors: ['page1', 'page2', 'page3'],
+	anchors: ['page1', 'page2', 'page3', 'page4'],
 });
 
 const goToProject = () => {
-	console.log('go to project')
+	fullpage_api.moveTo('page4');
 };
 
 const switchLang = lang => {
@@ -56,7 +56,7 @@ let isModalOpen = ref(false);
 let modalImageList = ref([]);
 
 const showMoreImage = item => {
-	console.log('showMoreImage =', item)
+	// console.log('showMoreImage =', item)
 	if (item.imgList.length > 0) {
 		modalImageList.value = item.imgList;
 		isModalOpen.value = true;

@@ -30,7 +30,9 @@
 				</div>
 			</div>
 			<div class="px-6 text-sm sm:w-[480px] sm:px-0">
-				<p class="mb-4">
+				<p
+					class="mb-4"
+				>
 					{{ lang('intro_1') }}
 				</p>
 				<p>

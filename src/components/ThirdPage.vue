@@ -63,7 +63,7 @@
 							<i class="fas fa-square text-primary-green mr-1" />
 							{{ lang('page3_skill_title') }}
 						</h1>
-						<div class="grid grid-cols-5">
+						<div class="grid grid-cols-4">
 							<div
 								v-for="(skillItem, skillIndex) in skillList"
 								:key="`skill-${skillIndex}`"
@@ -120,6 +120,7 @@ const careerInfoList = [
 			'career_desc_kkday_1',
 			'career_desc_kkday_2',
 			'career_desc_kkday_3',
+			'career_desc_kkday_4',
 		],
 	},
 	{
@@ -147,18 +148,18 @@ const careerInfoList = [
 ];
 
 const skillList = [
-	{
-		name: 'HTML',
-		img: getPictureRelativePath('html'),
-	},
+	// {
+	// 	name: 'HTML',
+	// 	img: getPictureRelativePath('html'),
+	// },
 	{
 		name: 'JavaScript',
 		img: getPictureRelativePath('js'),
 	},
-	{
-		name: 'CSS',
-		img: getPictureRelativePath('css'),
-	},
+	// {
+	// 	name: 'CSS',
+	// 	img: getPictureRelativePath('css'),
+	// },
 	{
 		name: 'Vue',
 		img: getPictureRelativePath('vue'),
@@ -166,6 +167,10 @@ const skillList = [
 	{
 		name: 'SASS',
 		img: getPictureRelativePath('sass'),
+	},
+	{
+		name: 'Tailwind CSS',
+		img: getPictureRelativePath('tailwind'),
 	},
 	{
 		name: 'JEST',
@@ -183,10 +188,10 @@ const skillList = [
 		name: 'PHP',
 		img: getPictureRelativePath('php'),
 	},
-	{
-		name: 'ESLint',
-		img: getPictureRelativePath('eslint'),
-	},
+	// {
+	// 	name: 'ESLint',
+	// 	img: getPictureRelativePath('eslint'),
+	// },
 ];
 
 </script>
