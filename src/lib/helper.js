@@ -5,5 +5,5 @@ export const getPictureRelativePath = (pic, fileType = 'png') => {
         return `./${pic}.${fileType}`;
     }
     // 在开发环境中，仍然使用绝对路径
-    return `/assets/${pic}.${fileType}`;
+    return `./${pic}.${fileType}`;
 };
