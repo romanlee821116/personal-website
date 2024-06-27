@@ -56,7 +56,6 @@ let isModalOpen = ref(false);
 let modalImageList = ref([]);
 
 const showMoreImage = item => {
-	// console.log('showMoreImage =', item)
 	if (item.imgList.length > 0) {
 		modalImageList.value = item.imgList;
 		isModalOpen.value = true;

@@ -1,1 +1,1 @@
-export const getPictureRelativePath = (pic, fileType = 'png') => `assets/${pic}.${fileType}`;
+export const getPictureRelativePath = (pic, fileType = 'png') => `/assets/${pic}.${fileType}`;

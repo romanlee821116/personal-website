@@ -6,5 +6,9 @@ import path from 'path';
 export default defineConfig({
   base: '/personal-website/',
   plugins: [vue()],
-  resolve: {},
+  // resolve: {
+  //   alias: {
+  //     '@assets': path.resolve(__dirname, 'dist/assets')
+  //   }
+  // },
 })
