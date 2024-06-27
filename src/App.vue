@@ -68,7 +68,8 @@ const pageComponentMap = [
 	{
 		component: FirstPage,
 		props: {
-			bgImage: getPictureRelativePath('mountain-1'),
+			// bgImage: getPictureRelativePath('mountain-1'),
+			bgImage: './assets/mountain-1.png',
 			sloganText: '',
 			pageNumber: ''
 		},
@@ -80,7 +81,8 @@ const pageComponentMap = [
 	{
 		component: SecondPage,
 		props: {
-			bgImage: getPictureRelativePath('mountain-1'),
+			// bgImage: getPictureRelativePath('mountain-1'),
+			bgImage: '/assets/mountain-1.png',
 			sloganText: 'INTRODUCTION',
 			pageNumber: '01',
 		},
@@ -89,7 +91,8 @@ const pageComponentMap = [
 	{
 		component: ThirdPage,
 		props: {
-			bgImage: getPictureRelativePath('mountain-1'),
+			// bgImage: getPictureRelativePath('mountain-1'),
+			bgImage: '/assets/assets/mountain-1.png',
 			sloganText: 'ABILITIES',
 			pageNumber: '02',
 		},
@@ -97,7 +100,8 @@ const pageComponentMap = [
 	{
 		component: ForthPage,
 		props: {
-			bgImage: getPictureRelativePath('mountain-1'),
+			// bgImage: getPictureRelativePath('mountain-1'),
+			bgImage: './assets/assets/mountain-1.png',
 			sloganText: 'PROFOLIO',
 			pageNumber: '03',
 		},
