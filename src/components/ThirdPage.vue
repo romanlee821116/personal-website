@@ -6,7 +6,7 @@
 	>
 		<div
 			id="third-page"
-			class="h-full flex flex-col pt-10 sm:flex-row sm:items-center sm:justify-center"
+			class="h-full flex flex-col pt-10 sm:flex-row sm:items-center sm:justify-center overflow-scroll	"
 		>
 			<div class="sm:flex">
 				<div class="career-info px-4 py-2 mr-6 sm:w-[540px]">
@@ -87,7 +87,6 @@
 <script setup>
 import PageWrap from './PageWrap.vue';
 import {getPictureRelativePath} from '../lib/helper';
-import {defineProps} from 'vue';
 
 const props = defineProps({
 	pageNumber: {
@@ -148,18 +147,10 @@ const careerInfoList = [
 ];
 
 const skillList = [
-	// {
-	// 	name: 'HTML',
-	// 	img: getPictureRelativePath('html'),
-	// },
 	{
 		name: 'JavaScript',
 		img: getPictureRelativePath('js'),
 	},
-	// {
-	// 	name: 'CSS',
-	// 	img: getPictureRelativePath('css'),
-	// },
 	{
 		name: 'Vue',
 		img: getPictureRelativePath('vue'),
@@ -188,10 +179,6 @@ const skillList = [
 		name: 'PHP',
 		img: getPictureRelativePath('php'),
 	},
-	// {
-	// 	name: 'ESLint',
-	// 	img: getPictureRelativePath('eslint'),
-	// },
 ];
 
 </script>

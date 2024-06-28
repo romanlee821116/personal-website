@@ -16,11 +16,14 @@ const i18n = createI18n({
 	fallbackLocale: 'tw',
 	messages,
 	globalInjection: true,
+	warnHtmlMessage: false,
 });
 
-const app = createApp(App)
-	.use(VueFullPage)
-	.use(i18n);
+const app = createApp(App).use(i18n);
+
+if (window.innerWidth > 768) {
+	app.use(VueFullPage)
+}
 
 app.config.globalProperties.lang = i18n.global.t;
 app.mount('#app');

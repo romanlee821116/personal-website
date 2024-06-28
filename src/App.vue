@@ -31,7 +31,6 @@ import SecondPage from './components/SecondPage.vue';
 import ThirdPage from './components/ThirdPage.vue';
 import ForthPage from './components/FourthPage.vue';
 import {reactive, ref} from 'vue';
-import {getPictureRelativePath} from './lib/helper';
 import {useI18n} from 'vue-i18n';
 import ImageModal from './components/ImageModal.vue';
 
@@ -68,7 +67,6 @@ const pageComponentMap = [
 	{
 		component: FirstPage,
 		props: {
-			// bgImage: getPictureRelativePath('mountain-1'),
 			bgImage: './assets/mountain-1.png',
 			sloganText: '',
 			pageNumber: ''

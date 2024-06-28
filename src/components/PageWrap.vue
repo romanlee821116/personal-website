@@ -1,7 +1,7 @@
 <template>
 	<div
 		id="page-wrap"
-		class="relative section h-screen w-scree bg-cover"
+		:class="['relative', 'section', pageHeight, 'w-screen', 'bg-cover']"
 		:style="{'backgroundImage': `url(${bgImage})`}"
 	>
 		<div class="mask w-full h-full absolute top-0 left-0 bg-black opacity-80"></div>
@@ -24,7 +24,7 @@
 </template>
 
 <script setup>
-import {defineProps} from 'vue';
+import {ref} from 'vue';
 
 const props = defineProps({
 	pageNumber: {
@@ -39,7 +39,14 @@ const props = defineProps({
 		type: String,
 		default: '',
 	},
+	customHeight: {
+		type: String,
+		default: '',
+	},
 });
+
+const pageHeight = ref(props.customHeight ? props.customHeight : 'h-screen');
+
 </script>
 
 <style scoped>

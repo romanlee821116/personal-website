@@ -49,7 +49,7 @@
 
 <script setup>
 import {getPictureRelativePath} from '../lib/helper';
-import {defineProps, defineEmits, ref} from 'vue';
+import {ref} from 'vue';
 
 const props = defineProps({
 	imageList: {
