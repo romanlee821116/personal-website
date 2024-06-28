@@ -6,7 +6,7 @@
 	>
         <div
 			id="forth-page"
-			class="h-full flex flex-col pt-10 sm:flex-row sm:items-center sm:justify-center"
+			class="md:h-full w-full relative h-screen"
 		>
 			<div class="flex items-center w-full absolute top-1/2 left-0 justify-center px-6 transform -translate-y-1/2 h-full">
 				<div

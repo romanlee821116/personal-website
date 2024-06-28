@@ -6,11 +6,11 @@
 	>
 		<div
 			id="second-page"
-			class="h-full flex flex-col items-center justify-center sm:flex-row"
+			class="h-fit md:h-full flex flex-col items-center justify-center sm:flex-row pt-6 md:pt-0"
 		>
 			<div class="text-left mb-8 sm:mr-20 img-wrap relative">
 				<img
-					class="w-56 h-fit rounded-full mx-auto sm:w-80 sm:rounded-none personal-pic"
+					class="w-56 sm:h-80 md:h-fit rounded-full mx-auto sm:w-80 sm:rounded-none personal-pic"
 					:src="getPictureRelativePath('myself')"
 					alt="personal-pic"
 				>

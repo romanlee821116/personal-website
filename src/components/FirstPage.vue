@@ -4,16 +4,20 @@
 	>
 		<div
 			id="first-page"
-			class="flex flex-col items-center justify-center h-full w-full relative"
+			class="flex flex-col items-center justify-center md:h-full w-full relative h-screen"
 		>
-			<b>Hi! I'm</b>
-			<div class="text-4xl mt-4 mb-6">Roman</div>
-			<button
-				@click="goToProject"
-				class="text-sm bg-primary-green hover:opacity-50 border-none focus:outline-none transition duration-200 ease-out hover:ease-in opacity-80"
-			>
-				VIEW MY WORKS
-			</button>
+			<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+				<b>Hi! I'm</b>
+				<div class="text-4xl mt-4 mb-6">
+					Roman
+				</div>
+				<button
+					@click="goToProject"
+					class="text-sm bg-primary-green hover:opacity-50 border-none focus:outline-none transition duration-200 ease-out hover:ease-in opacity-80"
+				>
+					VIEW MY WORKS
+				</button>
+			</div>
 			<div
 				id="language-btn"
 				class="absolute top-6 right-6 flex items-center text-sm"
