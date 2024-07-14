@@ -17,7 +17,7 @@
 		>
 			{{ sloganText }}
 		</h3>
-		<div class="relative max-w-screen-xl mx-auto h-full z-10">
+		<div class="relative mx-auto h-full z-10">
 			<slot />
 		</div>
 	</div>

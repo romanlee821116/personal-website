@@ -9,7 +9,7 @@
 			class="h-full flex flex-col pt-10 sm:flex-row sm:items-center sm:justify-center overflow-scroll	"
 		>
 			<div class="sm:flex">
-				<div class="career-info px-4 py-2 mr-6 sm:w-[540px]">
+				<div class="career-info px-4 py-2 mr-6 sm:w-[720px]">
 					<h1 class="text-base mb-2 font-bold sm:mb-4">
 						<i class="fas fa-square text-primary-green mr-1" />
 						{{ lang('page3_work_title') }}
@@ -20,7 +20,7 @@
 						class="flex items-top mb-2 sm:mb-6"
 					>
 						<img
-							class="w-12 h-12 rounded-full mr-3 sm:w-16 sm:h-16 sm:mr-6"
+							class="w-10 h-10 rounded-full mr-3 sm:w-12 sm:h-12 sm:mr-6"
 							:src="item.logo"
 							:alt="item.name"
 						>
